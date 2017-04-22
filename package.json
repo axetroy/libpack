@@ -1,0 +1,31 @@
+{
+  "name": "@axetroy/webpack-configless",
+  "version": "1.0.0",
+  "description": "use webpack without config",
+  "main": "index.js",
+  "bin": "./bin/webpack-configless",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axetroy/webpack-configless.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/axetroy/webpack-configless/issues"
+  },
+  "homepage": "https://github.com/axetroy/webpack-configless#readme",
+  "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "bluebird": "^3.5.0",
+    "caporal": "^0.5.0",
+    "co": "^4.6.0",
+    "cross-spawn": "^5.1.0",
+    "fs-extra": "^2.1.2",
+    "lodash": "^4.17.4",
+    "webpack": "^2.4.1"
+  }
+}
