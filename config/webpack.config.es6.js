@@ -7,23 +7,36 @@ const cwd = process.cwd();
 
 // webpack.config.js
 module.exports = {
-  entry: {
-    index: path.join(cwd, 'index.js')
-  },
+  entry: {},
   output: {
     path: path.join(cwd, 'build'),
     filename: '[name].js'
   },
   resolve: {
     modules: ['node_modules'],
-    extensions: ['.coffee', '.js', '.ts']
+    extensions: ['.coffee', '.js', '.jsx', '.ts']
   },
   module: {
     loaders: [
       {
-        test: /\.(jsx|js)?$/,
+        test: /\.jsx??$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        options: {
+          presets: ['flow', 'es2015', 'es2016', 'es2017'],
+          plugins: [
+            'transform-react-jsx',
+            'transform-decorators-legacy',
+            'transform-do-expressions',
+            'babel-plugin-transform-object-rest-spread',
+            'transform-strict-mode',
+            'syntax-dynamic-import'
+          ]
+        }
+      },
+      {
+        test: /\.tsx?$/,
+        loader: 'ts-loader'
       }
     ]
   }
