@@ -21,11 +21,11 @@
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "bluebird": "^3.5.0",
-    "caporal": "^0.5.0",
+    "caporal": "^0.7.0",
     "co": "^4.6.0",
     "cross-spawn": "^5.1.0",
-    "fs-extra": "^2.1.2",
+    "fs-extra": "^3.0.1",
     "lodash": "^4.17.4",
-    "webpack": "^2.4.1"
+    "webpack": "^3.0.0"
   }
 }
