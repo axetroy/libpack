@@ -8,7 +8,7 @@ const cwd = process.cwd();
 // webpack.config.js
 module.exports = {
   entry: {
-    bundle: path.join(cwd, 'index.js')
+    index: path.join(cwd, 'index.js')
   },
   output: {
     path: path.join(cwd, 'build'),
