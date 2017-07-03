@@ -12,7 +12,7 @@ module.exports = {
   },
   resolve: {
     modules: ["node_modules"],
-    extensions: [".coffee", ".js", ".jsx", ".ts"]
+    extensions: [".coffee", ".js", ".jsx", ".ts", ".tsx"]
   },
   module: {
     loaders: [
@@ -21,14 +21,19 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: "babel-loader",
         options: {
-          presets: ["flow", "es2015", "es2016", "es2017"],
+          presets: [
+            require("babel-preset-flow"),
+            require("babel-preset-es2015"),
+            require("babel-preset-es2016"),
+            require("babel-preset-es2017")
+          ],
           plugins: [
-            "transform-react-jsx",
-            "transform-decorators-legacy",
-            "transform-do-expressions",
-            "babel-plugin-transform-object-rest-spread",
-            "transform-strict-mode",
-            "syntax-dynamic-import"
+            require("babel-plugin-transform-react-jsx"),
+            require("babel-plugin-transform-decorators-legacy").default,
+            require("babel-plugin-transform-do-expressions"),
+            require("babel-plugin-transform-object-rest-spread"),
+            require("babel-plugin-transform-strict-mode"),
+            require("babel-plugin-syntax-dynamic-import")
           ]
         }
       },
@@ -64,5 +69,10 @@ module.exports = {
       },
       { test: /\.xml$/, loader: "xml-loader" } // will load all .xml files with xml-loader by default
     ]
+  },
+  resolveLoader: {
+    modules: [path.join(__dirname, "../", "node_modules")],
+    extensions: [".js", ".json"],
+    mainFields: ["loader", "main"]
   }
 };
