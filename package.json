@@ -1,6 +1,6 @@
 {
   "name": "webpack-configless",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "use webpack without config",
   "main": "index.js",
   "bin": "./bin/webpack-configless",
