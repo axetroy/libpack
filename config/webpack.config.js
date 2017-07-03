@@ -25,15 +25,23 @@ module.exports = {
             require("babel-preset-flow"),
             require("babel-preset-es2015"),
             require("babel-preset-es2016"),
-            require("babel-preset-es2017")
+            require("babel-preset-es2017"),
+            require("babel-preset-stage-0"),
+            require("babel-preset-stage-1"),
+            require("babel-preset-stage-2"),
+            require("babel-preset-stage-3")
           ],
           plugins: [
             require("babel-plugin-transform-react-jsx"),
             require("babel-plugin-transform-decorators-legacy").default,
             require("babel-plugin-transform-do-expressions"),
             require("babel-plugin-transform-object-rest-spread"),
-            require("babel-plugin-transform-strict-mode"),
-            require("babel-plugin-syntax-dynamic-import")
+            require("babel-plugin-transform-export-extensions"),
+            require("babel-plugin-syntax-dynamic-import"),
+            require("babel-plugin-transform-function-bind"),
+            require("babel-plugin-transform-es3-member-expression-literals"),
+            require("babel-plugin-transform-es3-property-literals"),
+            require("babel-plugin-transform-strict-mode")
           ]
         }
       },
