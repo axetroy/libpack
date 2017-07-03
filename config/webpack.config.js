@@ -39,7 +39,30 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
-      }
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        loaders: [
+          "file-loader",
+          {
+            loader: "image-webpack-loader",
+            query: {
+              progressive: true,
+              optimizationLevel: 7,
+              interlaced: false,
+              pngquant: {
+                quality: "65-90",
+                speed: 4
+              }
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(txt)|(md)$/,
+        use: "raw-loader"
+      },
+      { test: /\.xml$/, loader: "xml-loader" } // will load all .xml files with xml-loader by default
     ]
   }
 };
