@@ -33,6 +33,7 @@ module.exports = {
           ],
           plugins: [
             require("babel-plugin-transform-react-jsx"),
+            require("babel-plugin-transform-flow-comments"),
             require("babel-plugin-transform-decorators-legacy").default,
             require("babel-plugin-transform-do-expressions"),
             require("babel-plugin-transform-object-rest-spread"),

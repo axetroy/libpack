@@ -26,6 +26,7 @@
     "babel-plugin-transform-es3-member-expression-literals": "^6.22.0",
     "babel-plugin-transform-es3-property-literals": "^6.22.0",
     "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-flow-comments": "^6.22.0",
     "babel-plugin-transform-function-bind": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
