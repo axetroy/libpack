@@ -1,8 +1,8 @@
 # webpack-comfigless
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/gpmer/webpack-comfigless.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/gpmer/webpack-comfigless.svg?branch=master)](https://travis-ci.org/gpmer/webpack-comfigless)
-[![Dependency](https://david-dm.org/gpmer/webpack-comfigless.svg)](https://david-dm.org/gpmer/webpack-comfigless)
+[![Greenkeeper badge](https://badges.greenkeeper.io/axetroy/webpack-comfigless.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/axetroy/webpack-comfigless.svg?branch=master)](https://travis-ci.org/axetroy/webpack-comfigless)
+[![Dependency](https://david-dm.org/axetroy/webpack-comfigless.svg)](https://david-dm.org/axetroy/webpack-comfigless)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 [![Prettier](https://img.shields.io/badge/Code%20Style-Prettier-green.svg)](https://github.com/prettier/prettier)
 ![Node](https://img.shields.io/badge/node-%3E=6.0-blue.svg?style=flat-square)
@@ -67,21 +67,21 @@ npm uninstall webpack-comfigless -g
 ## Contributing
 
 ```bash
-git clone https://github.com/gpmer/webpack-comfigless.git
+git clone https://github.com/axetroy/webpack-comfigless.git
 cd ./webpack-comfigless
 yarn
 ./bin/webpack-configless
 ```
 
-You can flow [Contribute Guide](https://github.com/gpmer/webpack-comfigless/blob/master/contributing.md)
+You can flow [Contribute Guide](https://github.com/axetroy/webpack-comfigless/blob/master/contributing.md)
 
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-| [<img src="https://avatars1.githubusercontent.com/u/9758711?v=3" width="100px;"/><br /><sub>Axetroy</sub>](http://axetroy.github.io)<br />[💻](https://github.com/gpmer/gpm.js/commits?author=axetroy) 🔌 [⚠️](https://github.com/gpmer/gpm.js/commits?author=axetroy) [🐛](https://github.com/gpmer/gpm.js/issues?q=author%3Aaxetroy) 🎨 |
+| [<img src="https://avatars1.githubusercontent.com/u/9758711?v=3" width="100px;"/><br /><sub>Axetroy</sub>](http://axetroy.github.io)<br />[💻](https://github.com/axetroy/webpack-configless/commits?author=axetroy) 🔌 [⚠️](https://github.com/axetroy/webpack-configless/commits?author=axetroy) [🐛](https://github.com/axetroy/webpack-configless/issues?q=author%3Aaxetroy) 🎨 |
 | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## License
 
-The [MIT License](https://github.com/gpmer/webpack-comfigless/blob/master/LICENSE)
+The [MIT License](https://github.com/axetroy/webpack-comfigless/blob/master/LICENSE)
