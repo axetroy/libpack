@@ -1,12 +1,12 @@
-# webpack-comfigless
+# webpack-configless
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/axetroy/webpack-comfigless.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/axetroy/webpack-comfigless.svg?branch=master)](https://travis-ci.org/axetroy/webpack-comfigless)
-[![Dependency](https://david-dm.org/axetroy/webpack-comfigless.svg)](https://david-dm.org/axetroy/webpack-comfigless)
+[![Greenkeeper badge](https://badges.greenkeeper.io/axetroy/webpack-configless.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/axetroy/webpack-configless.svg?branch=master)](https://travis-ci.org/axetroy/webpack-configless)
+[![Dependency](https://david-dm.org/axetroy/webpack-configless.svg)](https://david-dm.org/axetroy/webpack-configless)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 [![Prettier](https://img.shields.io/badge/Code%20Style-Prettier-green.svg)](https://github.com/prettier/prettier)
 ![Node](https://img.shields.io/badge/node-%3E=6.0-blue.svg?style=flat-square)
-[![npm version](https://badge.fury.io/js/webpack-comfigless.svg)](https://badge.fury.io/js/webpack-comfigless)
+[![npm version](https://badge.fury.io/js/webpack-configless.svg)](https://badge.fury.io/js/webpack-configless)
 
 用于快速开发的cli工具
 
@@ -20,7 +20,7 @@
 
 ## Installation
 ```bash
-npm install webpack-comfigless -g
+npm install webpack-configless -g
 ```
 
 ## Usage
@@ -61,19 +61,19 @@ webpack-configless -e ./index.js -o ./build
 ## Uninstall
 
 ```bash
-npm uninstall webpack-comfigless -g
+npm uninstall webpack-configless -g
 ```
 
 ## Contributing
 
 ```bash
-git clone https://github.com/axetroy/webpack-comfigless.git
-cd ./webpack-comfigless
+git clone https://github.com/axetroy/webpack-configless.git
+cd ./webpack-configless
 yarn
 ./bin/webpack-configless
 ```
 
-You can flow [Contribute Guide](https://github.com/axetroy/webpack-comfigless/blob/master/contributing.md)
+You can flow [Contribute Guide](https://github.com/axetroy/webpack-configless/blob/master/contributing.md)
 
 ## Contributors
 
@@ -84,4 +84,4 @@ You can flow [Contribute Guide](https://github.com/axetroy/webpack-comfigless/bl
 
 ## License
 
-The [MIT License](https://github.com/axetroy/webpack-comfigless/blob/master/LICENSE)
+The [MIT License](https://github.com/axetroy/webpack-configless/blob/master/LICENSE)
