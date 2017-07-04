@@ -52,6 +52,7 @@
     "ts-loader": "^2.2.2",
     "typescript": "^2.4.1",
     "webpack": "^3.0.0",
+    "webpack-common-shake": "^1.2.0",
     "xml-loader": "^1.2.1"
   }
 }

@@ -16,7 +16,7 @@ acorn@^4.0.3:
   version "4.0.11"
   resolved "https://registry.npmjs.org/acorn/-/acorn-4.0.11.tgz#edcda3bd937e7556410d42ed5860f67399c794c0"
 
-acorn@^5.0.0:
+acorn@^5.0.0, acorn@^5.0.3:
   version "5.0.3"
   resolved "https://registry.npmjs.org/acorn/-/acorn-5.0.3.tgz#c460df08491463f028ccb82eab3730bf01087b3d"
 
@@ -1336,6 +1336,12 @@ commander@~2.8.1:
   resolved "http://registry.npm.taobao.org/commander/download/commander-2.8.1.tgz#06be367febfda0c330aa1e2a072d3dc9762425d4"
   dependencies:
     graceful-readlink ">= 1.0.0"
+
+common-shake@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/common-shake/-/common-shake-1.4.0.tgz#862a8cb089aca6146851010ca0f557a13c5d4611"
+  dependencies:
+    escope "^3.6.0"
 
 commondir@^1.0.1:
   version "1.0.1"
@@ -4746,6 +4752,15 @@ watchpack@^1.3.1:
     async "^2.1.2"
     chokidar "^1.4.3"
     graceful-fs "^4.1.2"
+
+webpack-common-shake@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/webpack-common-shake/-/webpack-common-shake-1.2.0.tgz#ceab5ac1b04df7e963e73ddeb3f38c147658d466"
+  dependencies:
+    acorn "^5.0.3"
+    common-shake "^1.4.0"
+    webpack "^3.0.0"
+    webpack-sources "^1.0.1"
 
 webpack-sources@^1.0.1:
   version "1.0.1"

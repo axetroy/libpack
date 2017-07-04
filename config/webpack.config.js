@@ -3,6 +3,7 @@
  */
 const webpack = require("webpack");
 const path = require("path");
+const ShakePlugin = require("webpack-common-shake").Plugin;
 
 // webpack.config.js
 module.exports = {
@@ -83,5 +84,6 @@ module.exports = {
     modules: [path.join(__dirname, "../", "node_modules")],
     extensions: [".js", ".json"],
     mainFields: ["loader", "main"]
-  }
+  },
+  plugins: [new ShakePlugin()]
 };
