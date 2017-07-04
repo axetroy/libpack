@@ -46,6 +46,7 @@
     "fs-extra": "^3.0.1",
     "image-webpack-loader": "^3.3.1",
     "lodash": "^4.17.4",
+    "prepack-webpack-plugin": "^1.1.0",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.18.2",
     "ts-loader": "^2.2.2",

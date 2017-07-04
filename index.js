@@ -15,6 +15,7 @@ program
   .option('-e, --entry', 'entry file', program.STRING, './index.js', true)
   .option('-o --output', 'output dir', program.STRING, './build/', true)
   .option('-m --minify', 'minify output file', program.BOOLEAN)
+  .option('--prepack', 'prepack the Javascript with facebook/prepack', program.BOOLEAN)
   .action(function(argv, options) {
     co(require('./lib/webpack')(argv, options)).catch(function(err) {
       console.error(err);
