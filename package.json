@@ -1,7 +1,7 @@
 {
   "name": "webpack-configless",
   "version": "0.2.0",
-  "description": "use webpack without config",
+  "description": "CLI tool for quickly develop library",
   "bin": "./bin/webpack-configless",
   "scripts": {
     "test": "node ./test"

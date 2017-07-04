@@ -10,8 +10,8 @@ const pkg = require('./package.json');
 program
   .version(pkg.version)
   .description(pkg.description)
-  .option('-w, --watch', 'watch the file change', program.BOOLEAN)
   .option('--cwd', 'current work dir', program.STRING)
+  .option('-w, --watch', 'watch the file change', program.BOOLEAN)
   .option('-e, --entry', 'entry file', program.STRING, './index.js', true)
   .option('-o --output', 'output dir', program.STRING, './build/', true)
   .option('-m --minify', 'minify output file', program.BOOLEAN)

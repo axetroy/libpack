@@ -8,15 +8,11 @@
 ![Node](https://img.shields.io/badge/node-%3E=6.0-blue.svg?style=flat-square)
 [![npm version](https://badge.fury.io/js/webpack-configless.svg)](https://badge.fury.io/js/webpack-configless)
 
-用于快速开发的cli工具
+CLI tool for quickly develop **Javascript/Typescript/Flow/React** library without any configuration
 
-适用与想要快速开发一个Javascript/Typescript库，又不用烦于配置
+Support ES2015/ES2016/ES2017/Flow/Typescript/JSX...and so on
 
-## Features
-
-- [x] 支持ES2015,ES2016,ES2017
-- [x] 支持Flow, Typescript, JSX
-- [x] 支持打包图片/css/文件
+> I hate endless config
 
 ## Installation
 ```bash
@@ -28,27 +24,28 @@ npm install webpack-configless -g
 ```bash
 $ webpack-configless --help
 
-   webpack-configless 0.1.0 - use webpack without config
-
+   webpack-configless 0.2.0 - use webpack without config
+     
    USAGE
 
-     webpack-configless
+     webpack-configless 
 
    OPTIONS
 
-     -w, --watch      watch the file change      optional
-     --cwd            current work dir           optional
+     --cwd            current work dir           optional                           
+     -w, --watch      watch the file change      optional                           
      -e, --entry      entry file                 required      default: "./index.js"
-     -o --output      output dir                 required      default: "./build/"
-     -m --minify      minify output file         optional
+     -o --output      output dir                 required      default: "./build/"  
+     -m --minify      minify output file         optional                           
 
    GLOBAL OPTIONS
 
-     -h, --help         Display help
-     -V, --version      Display version
-     --no-color         Disable colors
+     -h, --help         Display help                                      
+     -V, --version      Display version                                   
+     --no-color         Disable colors                                    
      --quiet            Quiet mode - only displays warn and error messages
-     -v, --verbose      Verbose mode - will also output debug messages
+     -v, --verbose      Verbose mode - will also output debug messages    
+
 
 ```
 
@@ -58,19 +55,13 @@ $ webpack-configless --help
 webpack-configless -e ./index.js -o ./build
 ```
 
-## Uninstall
-
-```bash
-npm uninstall webpack-configless -g
-```
-
 ## Contributing
 
 ```bash
 git clone https://github.com/axetroy/webpack-configless.git
 cd ./webpack-configless
 yarn
-./bin/webpack-configless
+yarn test
 ```
 
 You can flow [Contribute Guide](https://github.com/axetroy/webpack-configless/blob/master/contributing.md)
