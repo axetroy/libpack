@@ -2,7 +2,6 @@
   "name": "webpack-configless",
   "version": "0.2.0",
   "description": "use webpack without config",
-  "main": "index.js",
   "bin": "./bin/webpack-configless",
   "scripts": {
     "test": "node ./test"
