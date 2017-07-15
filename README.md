@@ -55,6 +55,10 @@ $ webpack-configless --help
 webpack-configless -e ./index.js -o ./build
 ```
 
+or here is a boilerplate repo
+
+[webpack-configless-boilerplate](https://github.com/axetroy/webpack-configless-boilerplate)
+
 ## Contributing
 
 ```bash
