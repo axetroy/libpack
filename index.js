@@ -10,12 +10,39 @@ const pkg = require('./package.json');
 program
   .version(pkg.version)
   .description(pkg.description)
-  .option('--cwd', 'current work dir', program.STRING)
+  .option('--cwd <cwd>', 'current work dir', program.STRING)
   .option('-w, --watch', 'watch the file change', program.BOOLEAN)
-  .option('-e, --entry', 'entry file', program.STRING, './index.js', true)
-  .option('-o --output', 'output dir', program.STRING, './build/', true)
+  .option(
+    '-e, --entry <entry>',
+    'entry file',
+    program.STRING,
+    './index.js',
+    true
+  )
+  .option(
+    '-o --output <output>',
+    'output dir',
+    program.STRING,
+    './build/',
+    true
+  )
   .option('-m --minify', 'minify output file', program.BOOLEAN)
-  .option('--prepack', 'prepack the Javascript with facebook/prepack', program.BOOLEAN)
+  .option(
+    '--prepack',
+    'prepack the Javascript with facebook/prepack',
+    program.BOOLEAN
+  )
+  .option(
+    '--library <library>',
+    'output library name, default your package.json name field',
+    program.STRING
+  )
+  .option(
+    '--libraryTarget <libraryTarget>',
+    'output library target',
+    program.STRING,
+    'umd'
+  )
   .action(function(argv, options) {
     co(require('./lib/webpack')(argv, options)).catch(function(err) {
       console.error(err);
