@@ -1,6 +1,6 @@
 {
   "name": "webpack-configless",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "CLI tool for quickly develop library",
   "bin": {
     "confless": "./bin/webpack-configless",
