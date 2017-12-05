@@ -42,7 +42,7 @@
     "babel-preset-stage-1": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
-    "caporal": "^0.8.0",
+    "caporal": "^0.9.0",
     "co": "^4.6.0",
     "cross-spawn": "^5.1.0",
     "css-loader": "^0.28.4",
