@@ -2,7 +2,7 @@
 
 const program = require("caporal");
 
-const pkg = require("./package.json");
+const pkg = require("../package.json");
 
 program
   .version(pkg.version)
