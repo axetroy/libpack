@@ -8,9 +8,15 @@
 ![Node](https://img.shields.io/badge/node-%3E=6.0-blue.svg?style=flat-square)
 [![npm version](https://badge.fury.io/js/libpack.svg)](https://badge.fury.io/js/libpack)
 
-CLI tool for quickly develop **Javascript/Typescript/Flow/React/Vue** library without any configuration
+CLI tool for quickly build your library with zero configuration.
+ 
+Support:
 
-Support ES2015/ES2016/ES2017/Flow/Typescript/JSX...and so on
+- [x] es2015/es2016/es2017/es2018...
+- [x] Flow
+- [x] Typescript
+- [x] React
+- [x] Vue
 
 > I hate endless config
 
@@ -25,27 +31,30 @@ npm install libpack -g
 ```bash
 $ libpack --help
 
-   libpack 0.2.0 - use webpack without config
-
-   USAGE
-
-     libpack
-
-   OPTIONS
-
-     --cwd            current work dir           optional
-     -w, --watch      watch the file change      optional
-     -e, --entry      entry file                 required      default: "./index.vue"
-     -o --output      output dir                 required      default: "./build/"  
-     -m --minify      minify output file         optional
-
-   GLOBAL OPTIONS
-
-     -h, --help         Display help
-     -V, --version      Display version
-     --no-color         Disable colors
-     --quiet            Quiet mode - only displays warn and error messages
-     -v, --verbose      Verbose mode - will also output debug messages
+    libpack 0.4.1 - Build your library without tears.
+      
+    USAGE
+ 
+      libpack 
+ 
+    OPTIONS
+ 
+      --cwd <cwd>                          Current work dir                                                                                  optional                            
+      -w, --watch                          Watch the file change                                                                             optional                            
+      -e, --entry <entry>                  Entry file path                                                                                   required      default: "./index.vue"
+      -o --output <output>                 Output dir path                                                                                   required      default: "./build/"   
+      --prepack                            prepack the Javascript with facebook/prepack                                                      optional                            
+      --library <library>                  Output library name, default your package.json name field                                         optional                            
+      --libraryTarget <libraryTarget>      Output library target, one of var/assign/this/window/global/commonjs/commonjs2/amd/umd/jsonp      optional      default: "umd"        
+ 
+    GLOBAL OPTIONS
+ 
+      -h, --help         Display help                                      
+      -V, --version      Display version                                   
+      --no-color         Disable colors                                    
+      --quiet            Quiet mode - only displays warn and error messages
+      -v, --verbose      Verbose mode - will also output debug messages
+ 
 ```
 
 ## Example

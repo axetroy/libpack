@@ -8,8 +8,8 @@ const pkg = require("./package.json");
 program
   .version(pkg.version)
   .description(pkg.description)
-  .option("--cwd <cwd>", "current work dir", program.STRING)
-  .option("-w, --watch", "watch the file change", program.BOOLEAN)
+  .option("--cwd <cwd>", "Current work dir", program.STRING)
+  .option("-w, --watch", "Watch the file change", program.BOOLEAN)
   .option(
     "-e, --entry <entry>",
     "Entry file path",
@@ -24,7 +24,6 @@ program
     "./build/",
     true
   )
-  .option("-m --minify", "minify output file", program.BOOLEAN)
   .option(
     "--prepack",
     "prepack the Javascript with facebook/prepack",
