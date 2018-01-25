@@ -1,50 +1,48 @@
 /**
  * Created by axetroy on 17-4-22.
  */
-const path = require('path');
-const program = require('caporal');
-const co = require('co');
+const program = require("caporal");
 
-const pkg = require('./package.json');
+const pkg = require("./package.json");
 
 program
   .version(pkg.version)
   .description(pkg.description)
-  .option('--cwd <cwd>', 'current work dir', program.STRING)
-  .option('-w, --watch', 'watch the file change', program.BOOLEAN)
+  .option("--cwd <cwd>", "current work dir", program.STRING)
+  .option("-w, --watch", "watch the file change", program.BOOLEAN)
   .option(
-    '-e, --entry <entry>',
-    'entry file',
+    "-e, --entry <entry>",
+    "Entry file path",
     program.STRING,
-    './index.js',
+    "./index.js",
     true
   )
   .option(
-    '-o --output <output>',
-    'output dir',
+    "-o --output <output>",
+    "Output dir path",
     program.STRING,
-    './build/',
+    "./build/",
     true
   )
-  .option('-m --minify', 'minify output file', program.BOOLEAN)
+  .option("-m --minify", "minify output file", program.BOOLEAN)
   .option(
-    '--prepack',
-    'prepack the Javascript with facebook/prepack',
+    "--prepack",
+    "prepack the Javascript with facebook/prepack",
     program.BOOLEAN
   )
   .option(
-    '--library <library>',
-    'output library name, default your package.json name field',
+    "--library <library>",
+    "Output library name, default your package.json name field",
     program.STRING
   )
   .option(
-    '--libraryTarget <libraryTarget>',
-    'output library target',
+    "--libraryTarget <libraryTarget>",
+    "Output library target, one of var/assign/this/window/global/commonjs/commonjs2/amd/umd/jsonp",
     program.STRING,
-    'umd'
+    "umd"
   )
   .action(function(argv, options) {
-    co(require('./lib/webpack')(argv, options)).catch(function(err) {
+    require("./lib/webpack")(argv, options).catch(err => {
       console.error(err);
     });
   });

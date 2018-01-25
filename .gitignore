@@ -66,3 +66,5 @@ typings/
 build
 
 .temp
+*.lock
+package-lock.json

@@ -3,7 +3,7 @@
  */
 
 export default function() {
-  import('./es5.js');
+  import('../es5/index.js');
   var word = 'hello world';
   console.log(word);
 }
