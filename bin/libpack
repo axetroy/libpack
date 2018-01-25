@@ -40,7 +40,7 @@ program
     "umd"
   )
   .action(function(argv, options) {
-    require("../index")(argv, options).catch(err => {
+    require("../index")(options).catch(err => {
       console.error(err);
     });
   });

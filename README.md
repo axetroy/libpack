@@ -9,14 +9,14 @@
 [![npm version](https://badge.fury.io/js/%40axetroy%2Flibpack.svg)](https://badge.fury.io/js/%40axetroy%2Flibpack)
 
 CLI tool for quickly build your library with zero configuration.
- 
+
 Support:
 
-- [x] es2015/es2016/es2017/es2018...
-- [x] Flow
-- [x] Typescript
-- [x] React
-- [x] Vue
+* [x] es2015/es2016/es2017/es2018...
+* [x] Flow
+* [x] Typescript
+* [x] React
+* [x] Vue
 
 > I hate endless config
 
@@ -32,29 +32,50 @@ npm install @axetroy/libpack -g
 $ libpack --help
 
     libpack 0.4.1 - Build your library without tears.
-      
+
     USAGE
- 
-      libpack 
- 
+
+      libpack
+
     OPTIONS
- 
-      --cwd <cwd>                          Current work dir                                                                                  optional                            
-      -w, --watch                          Watch the file change                                                                             optional                            
+
+      --cwd <cwd>                          Current work dir                                                                                  optional
+      -w, --watch                          Watch the file change                                                                             optional
       -e, --entry <entry>                  Entry file path                                                                                   required      default: "./index.vue"
-      -o --output <output>                 Output dir path                                                                                   required      default: "./build/"   
-      --prepack                            prepack the Javascript with facebook/prepack                                                      optional                            
-      --library <library>                  Output library name, default your package.json name field                                         optional                            
-      --libraryTarget <libraryTarget>      Output library target, one of var/assign/this/window/global/commonjs/commonjs2/amd/umd/jsonp      optional      default: "umd"        
- 
+      -o --output <output>                 Output dir path                                                                                   required      default: "./build/"
+      --prepack                            prepack the Javascript with facebook/prepack                                                      optional
+      --library <library>                  Output library name, default your package.json name field                                         optional
+      --libraryTarget <libraryTarget>      Output library target, one of var/assign/this/window/global/commonjs/commonjs2/amd/umd/jsonp      optional      default: "umd"
+
     GLOBAL OPTIONS
- 
-      -h, --help         Display help                                      
-      -V, --version      Display version                                   
-      --no-color         Disable colors                                    
+
+      -h, --help         Display help
+      -V, --version      Display version
+      --no-color         Disable colors
       --quiet            Quiet mode - only displays warn and error messages
       -v, --verbose      Verbose mode - will also output debug messages
- 
+```
+
+## API
+
+```javascript
+const libpack = require("@axetroy/libpack");
+
+libpack({
+  cwd: process.cwd(),
+  watch: false,
+  entry: "./index.js",
+  output: "./build",
+  prepack: false,
+  library: "my-library-name",
+  libraryTarget: "umd"
+})
+  .then(function() {
+    console.log("build success...");
+  })
+  .catch(function(err) {
+    console.error(err);
+  });
 ```
 
 ## Example
@@ -83,7 +104,7 @@ You can flow [Contribute Guide](https://github.com/axetroy/libpack/blob/master/c
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 
 | [<img src="https://avatars1.githubusercontent.com/u/9758711?v=3" width="100px;"/><br /><sub>Axetroy</sub>](http://axetroy.github.io)<br />[💻](https://github.com/axetroy/libpack/commits?author=axetroy) 🔌 [⚠️](https://github.com/axetroy/libpack/commits?author=axetroy) [🐛](https://github.com/axetroy/libpack/issues?q=author%3Aaxetroy) 🎨 |
-| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
