@@ -22,7 +22,7 @@ const spawn = require("cross-spawn");
         case ".vue":
           console.log("Packing " + path.join(testDir, subDir, file));
           spawn(
-            "./bin/webpack-configless",
+            "./bin/libpack",
             [
               "-e",
               "./testcase/" + subDir + "/" + file,

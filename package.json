@@ -1,25 +1,21 @@
 {
-  "name": "webpack-configless",
+  "name": "libpack",
   "version": "0.4.1",
   "description": "CLI tool for quickly develop library",
-  "bin": {
-    "confless": "./bin/webpack-configless",
-    "configless": "./bin/webpack-configless",
-    "webpack-configless": "./bin/webpack-configless"
-  },
+  "bin": "./bin/libpack",
   "scripts": {
     "test": "node ./test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/axetroy/webpack-configless.git"
+    "url": "git+https://github.com/axetroy/libpack.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/axetroy/webpack-configless/issues"
+    "url": "https://github.com/axetroy/libpack/issues"
   },
-  "homepage": "https://github.com/axetroy/webpack-configless#readme",
+  "homepage": "https://github.com/axetroy/libpack#readme",
   "dependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",

@@ -1,12 +1,12 @@
-# webpack-configless
+# libpack
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/axetroy/webpack-configless.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/axetroy/webpack-configless.svg?branch=master)](https://travis-ci.org/axetroy/webpack-configless)
-[![Dependency](https://david-dm.org/axetroy/webpack-configless.svg)](https://david-dm.org/axetroy/webpack-configless)
+[![Greenkeeper badge](https://badges.greenkeeper.io/axetroy/libpack.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/axetroy/libpack.svg?branch=master)](https://travis-ci.org/axetroy/libpack)
+[![Dependency](https://david-dm.org/axetroy/libpack.svg)](https://david-dm.org/axetroy/libpack)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 [![Prettier](https://img.shields.io/badge/Code%20Style-Prettier-green.svg)](https://github.com/prettier/prettier)
 ![Node](https://img.shields.io/badge/node-%3E=6.0-blue.svg?style=flat-square)
-[![npm version](https://badge.fury.io/js/webpack-configless.svg)](https://badge.fury.io/js/webpack-configless)
+[![npm version](https://badge.fury.io/js/libpack.svg)](https://badge.fury.io/js/libpack)
 
 CLI tool for quickly develop **Javascript/Typescript/Flow/React/Vue** library without any configuration
 
@@ -17,19 +17,19 @@ Support ES2015/ES2016/ES2017/Flow/Typescript/JSX...and so on
 ## Installation
 
 ```bash
-npm install webpack-configless -g
+npm install libpack -g
 ```
 
 ## Usage
 
 ```bash
-$ webpack-configless --help
+$ libpack --help
 
-   webpack-configless 0.2.0 - use webpack without config
+   libpack 0.2.0 - use webpack without config
 
    USAGE
 
-     webpack-configless
+     libpack
 
    OPTIONS
 
@@ -51,29 +51,29 @@ $ webpack-configless --help
 ## Example
 
 ```bash
-webpack-configless -e ./index.vue -o ./build
+libpack -e ./index.vue -o ./build
 ```
 
 or here is a boilerplate repo
 
-[webpack-configless-boilerplate](https://github.com/axetroy/webpack-configless-boilerplate)
+[libpack-boilerplate](https://github.com/axetroy/libpack-boilerplate)
 
 ## Contributing
 
 ```bash
-git clone https://github.com/axetroy/webpack-configless.git
-cd ./webpack-configless
+git clone https://github.com/axetroy/libpack.git
+cd ./libpack
 yarn
 yarn test
 ```
 
-You can flow [Contribute Guide](https://github.com/axetroy/webpack-configless/blob/master/contributing.md)
+You can flow [Contribute Guide](https://github.com/axetroy/libpack/blob/master/contributing.md)
 
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 
-| [<img src="https://avatars1.githubusercontent.com/u/9758711?v=3" width="100px;"/><br /><sub>Axetroy</sub>](http://axetroy.github.io)<br />[💻](https://github.com/axetroy/webpack-configless/commits?author=axetroy) 🔌 [⚠️](https://github.com/axetroy/webpack-configless/commits?author=axetroy) [🐛](https://github.com/axetroy/webpack-configless/issues?q=author%3Aaxetroy) 🎨 |
+| [<img src="https://avatars1.githubusercontent.com/u/9758711?v=3" width="100px;"/><br /><sub>Axetroy</sub>](http://axetroy.github.io)<br />[💻](https://github.com/axetroy/libpack/commits?author=axetroy) 🔌 [⚠️](https://github.com/axetroy/libpack/commits?author=axetroy) [🐛](https://github.com/axetroy/libpack/issues?q=author%3Aaxetroy) 🎨 |
 | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 
 
@@ -81,4 +81,4 @@ You can flow [Contribute Guide](https://github.com/axetroy/webpack-configless/bl
 
 ## License
 
-The [MIT License](https://github.com/axetroy/webpack-configless/blob/master/LICENSE)
+The [MIT License](https://github.com/axetroy/libpack/blob/master/LICENSE)
