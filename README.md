@@ -6,7 +6,7 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 [![Prettier](https://img.shields.io/badge/Code%20Style-Prettier-green.svg)](https://github.com/prettier/prettier)
 ![Node](https://img.shields.io/badge/node-%3E=6.0-blue.svg?style=flat-square)
-[![npm version](https://badge.fury.io/js/@axetroy/libpack.svg)](https://badge.fury.io/js/@axetroy/libpack)
+[![npm version](https://badge.fury.io/js/%40axetroy%2Flibpack.svg)](https://badge.fury.io/js/%40axetroy%2Flibpack)
 
 CLI tool for quickly build your library with zero configuration.
  
