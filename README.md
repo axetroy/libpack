@@ -41,7 +41,7 @@ $ libpack --help
 
       --cwd <cwd>                          Current work dir                                                                                  optional
       -w, --watch                          Watch the file change                                                                             optional
-      -e, --entry <entry>                  Entry file path                                                                                   required      default: "./index.vue"
+      -e, --entry <entry>                  Entry file path                                                                                   required      default: "./index.js"
       -o --output <output>                 Output dir path                                                                                   required      default: "./build/"
       --prepack                            prepack the Javascript with facebook/prepack                                                      optional
       --library <library>                  Output library name, default your package.json name field                                         optional
@@ -81,7 +81,7 @@ libpack({
 ## Example
 
 ```bash
-libpack -e ./index.vue -o ./build
+libpack -e ./index.js -o ./build
 ```
 
 or here is a boilerplate repo
