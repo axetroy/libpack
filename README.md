@@ -8,13 +8,14 @@
 ![Node](https://img.shields.io/badge/node-%3E=6.0-blue.svg?style=flat-square)
 [![npm version](https://badge.fury.io/js/webpack-configless.svg)](https://badge.fury.io/js/webpack-configless)
 
-CLI tool for quickly develop **Javascript/Typescript/Flow/React** library without any configuration
+CLI tool for quickly develop **Javascript/Typescript/Flow/React/Vue** library without any configuration
 
 Support ES2015/ES2016/ES2017/Flow/Typescript/JSX...and so on
 
 > I hate endless config
 
 ## Installation
+
 ```bash
 npm install webpack-configless -g
 ```
@@ -25,34 +26,32 @@ npm install webpack-configless -g
 $ webpack-configless --help
 
    webpack-configless 0.2.0 - use webpack without config
-     
+
    USAGE
 
-     webpack-configless 
+     webpack-configless
 
    OPTIONS
 
-     --cwd            current work dir           optional                           
-     -w, --watch      watch the file change      optional                           
-     -e, --entry      entry file                 required      default: "./index.js"
+     --cwd            current work dir           optional
+     -w, --watch      watch the file change      optional
+     -e, --entry      entry file                 required      default: "./index.vue"
      -o --output      output dir                 required      default: "./build/"  
-     -m --minify      minify output file         optional                           
+     -m --minify      minify output file         optional
 
    GLOBAL OPTIONS
 
-     -h, --help         Display help                                      
-     -V, --version      Display version                                   
-     --no-color         Disable colors                                    
+     -h, --help         Display help
+     -V, --version      Display version
+     --no-color         Disable colors
      --quiet            Quiet mode - only displays warn and error messages
-     -v, --verbose      Verbose mode - will also output debug messages    
-
-
+     -v, --verbose      Verbose mode - will also output debug messages
 ```
 
 ## Example
 
 ```bash
-webpack-configless -e ./index.js -o ./build
+webpack-configless -e ./index.vue -o ./build
 ```
 
 or here is a boilerplate repo
@@ -73,8 +72,11 @@ You can flow [Contribute Guide](https://github.com/axetroy/webpack-configless/bl
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+
 | [<img src="https://avatars1.githubusercontent.com/u/9758711?v=3" width="100px;"/><br /><sub>Axetroy</sub>](http://axetroy.github.io)<br />[💻](https://github.com/axetroy/webpack-configless/commits?author=axetroy) 🔌 [⚠️](https://github.com/axetroy/webpack-configless/commits?author=axetroy) [🐛](https://github.com/axetroy/webpack-configless/issues?q=author%3Aaxetroy) 🎨 |
-| :---: |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## License

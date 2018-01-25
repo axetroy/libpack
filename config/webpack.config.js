@@ -5,6 +5,34 @@ const path = require("path");
 const ShakePlugin = require("webpack-common-shake").Plugin;
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
+const babelOptions = {
+  presets: [
+    require("babel-preset-flow"),
+    require("babel-preset-react"),
+    require("babel-preset-env"),
+    require("babel-preset-stage-0"),
+    require("babel-preset-stage-1"),
+    require("babel-preset-stage-2"),
+    require("babel-preset-stage-3")
+  ],
+  plugins: [
+    require("babel-plugin-transform-flow-comments"),
+    require("babel-plugin-transform-decorators-legacy").default,
+    require("babel-plugin-transform-es3-member-expression-literals"),
+    require("babel-plugin-transform-es3-property-literals"),
+    require("babel-plugin-transform-strict-mode"),
+    [
+      require("babel-plugin-transform-runtime"),
+      {
+        helpers: false,
+        polyfill: false,
+        regenerator: true,
+        moduleName: "babel-runtime"
+      }
+    ]
+  ]
+};
+
 // webpack.config.js
 module.exports = {
   entry: {},
@@ -18,35 +46,20 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx??$/,
+        test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
         loader: "babel-loader",
+        options: babelOptions
+      },
+      {
+        test: /\.vue$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: "vue-loader",
         options: {
-          presets: [
-            require("babel-preset-flow"),
-            require("babel-preset-react"),
-            require("babel-preset-env"),
-            require("babel-preset-stage-0"),
-            require("babel-preset-stage-1"),
-            require("babel-preset-stage-2"),
-            require("babel-preset-stage-3")
-          ],
-          plugins: [
-            require("babel-plugin-transform-flow-comments"),
-            require("babel-plugin-transform-decorators-legacy").default,
-            require("babel-plugin-transform-es3-member-expression-literals"),
-            require("babel-plugin-transform-es3-property-literals"),
-            require("babel-plugin-transform-strict-mode"),
-            [
-              require("babel-plugin-transform-runtime"),
-              {
-                helpers: false,
-                polyfill: false,
-                regenerator: true,
-                moduleName: "babel-runtime"
-              }
-            ]
-          ]
+          loaders: {
+            js: "babel-loader",
+            options: babelOptions
+          }
         }
       },
       {

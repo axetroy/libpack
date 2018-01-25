@@ -13,21 +13,29 @@ const spawn = require("cross-spawn");
     const subFiles = await fs.readdir(path.join(testDir, subDir));
     while (subFiles.length) {
       const file = subFiles.shift();
-      if (/(\.jsx?)|(\.tsx?)$/.test(file)) {
-        spawn(
-          "./bin/webpack-configless",
-          [
-            "-e",
-            "./testcase/" + subDir + "/" + file,
-            "-o",
-            "./build/" + subDir,
-            "--library",
-            subDir
-          ],
-          {
-            stdio: "inherit"
-          }
-        );
+      const ext = path.extname(file);
+      switch (ext) {
+        case ".js":
+        case ".jsx":
+        case ".ts":
+        case ".tsx":
+        case ".vue":
+          console.log("Packing " + path.join(testDir, subDir, file));
+          spawn(
+            "./bin/webpack-configless",
+            [
+              "-e",
+              "./testcase/" + subDir + "/" + file,
+              "-o",
+              "./build/" + subDir,
+              "--library",
+              subDir
+            ],
+            {
+              stdio: "inherit"
+            }
+          );
+          break;
       }
     }
   }

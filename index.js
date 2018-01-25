@@ -14,7 +14,7 @@ program
     "-e, --entry <entry>",
     "Entry file path",
     program.STRING,
-    "./index.js",
+    "./index.vue",
     true
   )
   .option(
