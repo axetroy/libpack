@@ -23,7 +23,7 @@ Support:
 ## Installation
 
 ```bash
-npm install libpack -g
+npm install @axetroy/libpack -g
 ```
 
 ## Usage

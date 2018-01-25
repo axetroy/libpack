@@ -1,5 +1,5 @@
 {
-  "name": "libpack",
+  "name": "@axetroy/libpack",
   "version": "0.5.0",
   "description": "Build your library without tears.",
   "bin": "./bin/libpack",
