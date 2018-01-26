@@ -31,29 +31,32 @@ npm install @axetroy/libpack -g
 ```bash
 $ libpack --help
 
-    libpack 0.4.1 - Build your library without tears.
+   libpack 0.5.2 - Build your library without tears.
+     
+   USAGE
 
-    USAGE
+     libpack 
 
-      libpack
+   OPTIONS
 
-    OPTIONS
+     --cwd <cwd>                          Current work dir                                                                              optional                           
+     -w, --watch                          Watch the file change                                                                         optional                           
+     --externals　<externals>             Externals library                                                                             optional                           
+     --target　<target>                   Build target, https://webpack.js.org/concepts/targets/                                        optional      default: "web"       
+     -e, --entry <entry>                  Entry file path                                                                               required      default: "./index.js"
+     -o --output <output>                 Output dir path                                                                               required      default: "./build/"  
+     --prepack                            prepack the Javascript with facebook/prepack                                                  optional                           
+     --library <library>                  Output library name, default your package.json name field                                     optional                           
+     --libraryTarget <libraryTarget>      Output library target, https://webpack.js.org/configuration/output/#output-librarytarget      optional      default: "umd"       
 
-      --cwd <cwd>                          Current work dir                                                                                  optional
-      -w, --watch                          Watch the file change                                                                             optional
-      -e, --entry <entry>                  Entry file path                                                                                   required      default: "./index.js"
-      -o --output <output>                 Output dir path                                                                                   required      default: "./build/"
-      --prepack                            prepack the Javascript with facebook/prepack                                                      optional
-      --library <library>                  Output library name, default your package.json name field                                         optional
-      --libraryTarget <libraryTarget>      Output library target, one of var/assign/this/window/global/commonjs/commonjs2/amd/umd/jsonp      optional      default: "umd"
+   GLOBAL OPTIONS
 
-    GLOBAL OPTIONS
+     -h, --help         Display help                                      
+     -V, --version      Display version                                   
+     --no-color         Disable colors                                    
+     --quiet            Quiet mode - only displays warn and error messages
+     -v, --verbose      Verbose mode - will also output debug messages    
 
-      -h, --help         Display help
-      -V, --version      Display version
-      --no-color         Disable colors
-      --quiet            Quiet mode - only displays warn and error messages
-      -v, --verbose      Verbose mode - will also output debug messages
 ```
 
 ## API
@@ -69,7 +72,8 @@ libpack({
   prepack: false,
   library: "my-library-name",
   libraryTarget: "umd",
-  externals: []
+  externals: [],
+  target: 'web'
 })
   .then(function() {
     console.log("build success...");

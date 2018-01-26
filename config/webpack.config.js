@@ -40,6 +40,7 @@ module.exports = {
   output: {
     filename: "[name].js"
   },
+  target: "web",
   resolve: {
     modules: ["node_modules"],
     extensions: [".js", ".jsx", ".ts", ".tsx", ".vue"]
