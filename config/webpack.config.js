@@ -2,6 +2,7 @@
  * Created by axetroy on 17-4-22.
  */
 const path = require("path");
+const webpack = require("webpack");
 const ShakePlugin = require("webpack-common-shake").Plugin;
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
@@ -100,11 +101,12 @@ module.exports = {
     extensions: [".js", ".json"],
     mainFields: ["loader", "main"]
   },
-  plugins: [new ShakePlugin()].concat(
+  plugins: [new webpack.ProgressPlugin(), new ShakePlugin()].concat(
     process.env.NODE_ENV === "production" ? [UglifyJSPlugin] : []
   ),
-  externals: {
-  },
+  stats: "verbose",
+  profile: true,
+  externals: {},
   watch: false,
   watchOptions: {
     ignored: /node_modules/
