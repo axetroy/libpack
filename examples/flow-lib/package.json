@@ -1,0 +1,13 @@
+{
+  "name": "flow-lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/index.js",
+  "scripts": {
+    "server": "libpack ./index.js ./build --server",
+    "start": "libpack ./index.js ./build --watch",
+    "build": "libpack ./index.js ./build"
+  },
+  "author": "",
+  "license": "ISC"
+}
