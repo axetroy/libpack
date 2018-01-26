@@ -7,15 +7,6 @@ const pkg = require("../package.json");
 program
   .version(pkg.version)
   .description(pkg.description)
-  .option("--cwd <cwd>", "Current work dir", program.STRING)
-  .option("-w, --watch", "Watch the file change", program.BOOLEAN)
-  .option("--externals <externals>", "Externals library", program.LIST)
-  .option(
-    "--target <target>",
-    "Build target, https://webpack.js.org/concepts/targets/",
-    program.STRING,
-    "web"
-  )
   .option(
     "-e, --entry <entry>",
     "Entry file path",
@@ -29,6 +20,15 @@ program
     program.STRING,
     "./build/",
     true
+  )
+  .option("--cwd <cwd>", "Current work dir", program.STRING)
+  .option("-w, --watch", "Watch the file change", program.BOOLEAN)
+  .option("--server", "Server the file", program.BOOLEAN)
+  .option(
+    "--target <target>",
+    "Build target, https://webpack.js.org/concepts/targets/",
+    program.STRING,
+    "web"
   )
   .option(
     "--prepack",
@@ -45,6 +45,11 @@ program
     "Output library target, https://webpack.js.org/configuration/output/#output-librarytarget",
     program.STRING,
     "umd"
+  )
+  .option(
+    "--externals <externals>",
+    "Externals library, eg. --externals react react-dom",
+    program.LIST
   )
   .action(function(argv, options) {
     require("../index")(options).catch(err => {

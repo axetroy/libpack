@@ -3,9 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "libpack --entry index.jsx --output ./build --watch",
-    "build": "NODE_ENV=production libpack --entry index.jsx --output ./build"
+    "server": "libpack --entry app.jsx --output ./build --server",
+    "start": "libpack --externals react,react-dom --entry index.jsx --output ./build --watch",
+    "build": "NODE_ENV=production libpack --externals react,react-dom --entry index.jsx --output ./build"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies":{
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
 }

@@ -34,6 +34,35 @@ const babelOptions = {
   ]
 };
 
+const webpackCommonPlugins = [
+  new webpack.DefinePlugin(
+    (() => {
+      let result = {};
+      for (let key in process.env) {
+        result["process.env." + key] = `"${process.env[key]}"`;
+      }
+      return result;
+    })()
+  ),
+  new webpack.ProgressPlugin(),
+  new ShakePlugin(),
+  new webpack.SourceMapDevToolPlugin({})
+];
+
+const webpackDevPlugins = [new webpack.NamedModulesPlugin()];
+const webpackProdPlugins = [
+  new UglifyJSPlugin({
+    sourceMap: true,
+    uglifyOptions: {
+      ecma: 5,
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
+    }
+  })
+];
+
 // webpack.config.js
 module.exports = {
   entry: {},
@@ -102,32 +131,17 @@ module.exports = {
     extensions: [".js", ".json"],
     mainFields: ["loader", "main"]
   },
-  plugins: [
-    new webpack.DefinePlugin(
-      (() => {
-        let result = {};
-        for (let key in process.env) {
-          result["process.env." + key] = `"${process.env[key]}"`;
-        }
-        return result;
-      })()
-    ),
-    new webpack.ProgressPlugin(),
-    new ShakePlugin()
-  ].concat(
+  node: {
+    global: false,
+    process: false,
+    Buffer: false,
+    __filename: false,
+    __dirname: false
+  },
+  plugins: webpackCommonPlugins.concat(
     process.env.NODE_ENV === "production"
-      ? [
-          new UglifyJSPlugin({
-            uglifyOptions: {
-              ecma: 5,
-              compress: {
-                drop_console: true,
-                drop_debugger: true
-              }
-            }
-          })
-        ]
-      : []
+      ? webpackProdPlugins
+      : webpackDevPlugins
   ),
   stats: "verbose",
   profile: true,
