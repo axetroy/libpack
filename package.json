@@ -1,6 +1,6 @@
 {
   "name": "@axetroy/libpack",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Build your library without tears.",
   "bin": "./bin/libpack",
   "scripts": {
