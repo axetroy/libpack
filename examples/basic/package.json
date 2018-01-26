@@ -2,9 +2,9 @@
   "name": "basic",
   "version": "1.0.0",
   "scripts": {
-    "server": "libpack --entry index.js --output ./build --server",
-    "start": "libpack --entry index.js --output ./build --watch",
-    "build": "NODE_ENV=production libpack --entry index.js --output ./build"
+    "server": "libpack ./index.js ./build --server",
+    "start": "libpack ./index.js ./build --watch",
+    "build": "NODE_ENV=production libpack ./index.js ./build"
   },
   "author": "",
   "license": "ISC",

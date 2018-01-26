@@ -4,9 +4,9 @@
   "description": "",
   "main": "./build/index",
   "scripts": {
-    "server": "libpack --entry app.jsx --output ./build --server",
-    "start": "libpack --externals react,react-dom --entry index.jsx --output ./build --watch",
-    "build": "NODE_ENV=production libpack --externals react,react-dom --entry index.jsx --output ./build"
+    "server": "libpack ./app.jsx ./build --server",
+    "start": "libpack ./index.jsx ./build --watch --externals react,react-dom",
+    "build": "NODE_ENV=production libpack ./index.jsx ./build --externals react,react-dom"
   },
   "author": "",
   "license": "ISC",

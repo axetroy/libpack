@@ -7,23 +7,11 @@ const pkg = require("../package.json");
 program
   .version(pkg.version)
   .description(pkg.description)
-  .option(
-    "-e, --entry <entry>",
-    "Entry file path",
-    program.STRING,
-    "./index.js",
-    true
-  )
-  .option(
-    "-o --output <output>",
-    "Output dir path",
-    program.STRING,
-    "./build/",
-    true
-  )
+  .argument("<entry>", "Entry file path", program.STRING, "./index.js", true)
+  .argument("<output>", "Output dir path", program.STRING, "./build/", true)
   .option("--cwd <cwd>", "Current work dir", program.STRING)
-  .option("-w, --watch", "Watch the file change", program.BOOLEAN)
-  .option("--server", "Server the file", program.BOOLEAN)
+  .option("-w, --watch", "Watch the file change", program.BOOLEAN, false)
+  .option("--server", "Server the file", program.BOOLEAN, false)
   .option(
     "--target <target>",
     "Build target, https://webpack.js.org/concepts/targets/",
@@ -32,8 +20,9 @@ program
   )
   .option(
     "--prepack",
-    "prepack the Javascript with facebook/prepack",
-    program.BOOLEAN
+    "Prepack the Javascript with facebook/prepack",
+    program.BOOLEAN,
+    false
   )
   .option(
     "--library <library>",
@@ -48,11 +37,12 @@ program
   )
   .option(
     "--externals <externals>",
-    "Externals library, eg. --externals react react-dom",
-    program.LIST
+    'Externals library, eg. "--externals react react-dom"',
+    program.LIST,
+    []
   )
   .action(function(argv, options) {
-    require("../index")(options).catch(err => {
+    require("../index")(Object.assign(argv, options)).catch(err => {
       console.error(err);
     });
   });

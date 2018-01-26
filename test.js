@@ -24,9 +24,7 @@ const spawn = require("cross-spawn");
           spawn(
             "./bin/libpack",
             [
-              "-e",
               "./testcase/" + subDir + "/" + file,
-              "-o",
               "./build/" + subDir,
               "--library",
               subDir

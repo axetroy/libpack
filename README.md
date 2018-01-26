@@ -26,35 +26,38 @@ npm install @axetroy/libpack -g
 
 ## Usage
 
-```bash
+```
 $ libpack --help
 
    libpack 0.5.2 - Build your library without tears.
-     
+
    USAGE
 
-     libpack 
+     libpack <entry> <output>
+
+   ARGUMENTS
+
+     <entry>       Entry file path      required      default: "./index.js"
+     <output>      Output dir path      required      default: "./build/"  
 
    OPTIONS
 
-     --cwd <cwd>                          Current work dir                                                                              optional                           
-     -w, --watch                          Watch the file change                                                                         optional                           
-     --externals  <externals>             Externals library                                                                             optional                           
-     --target  <target>                   Build target, https://webpack.js.org/concepts/targets/                                        optional      default: "web"       
-     -e, --entry <entry>                  Entry file path                                                                               required      default: "./index.js"
-     -o --output <output>                 Output dir path                                                                               required      default: "./build/"  
-     --prepack                            prepack the Javascript with facebook/prepack                                                  optional                           
-     --library <library>                  Output library name, default your package.json name field                                     optional                           
-     --libraryTarget <libraryTarget>      Output library target, https://webpack.js.org/configuration/output/#output-librarytarget      optional      default: "umd"       
+     --cwd <cwd>                          Current work dir                                                                              optional
+     -w, --watch                          Watch the file change                                                                         optional      default: false
+     --server                             Server the file                                                                               optional      default: false
+     --target <target>                    Build target, https://webpack.js.org/concepts/targets/                                        optional      default: "web"
+     --prepack                            Prepack the Javascript with facebook/prepack                                                  optional      default: false
+     --library <library>                  Output library name, default your package.json name field                                     optional
+     --libraryTarget <libraryTarget>      Output library target, https://webpack.js.org/configuration/output/#output-librarytarget      optional      default: "umd"
+     --externals <externals>              Externals library, eg. "--externals react react-dom"                                          optional      default: []
 
    GLOBAL OPTIONS
 
-     -h, --help         Display help                                      
-     -V, --version      Display version                                   
-     --no-color         Disable colors                                    
+     -h, --help         Display help
+     -V, --version      Display version
+     --no-color         Disable colors
      --quiet            Quiet mode - only displays warn and error messages
-     -v, --verbose      Verbose mode - will also output debug messages    
-
+     -v, --verbose      Verbose mode - will also output debug messages
 ```
 
 ## API
@@ -71,7 +74,8 @@ libpack({
   library: "my-library-name",
   libraryTarget: "umd",
   externals: [],
-  target: 'web'
+  target: "web",
+  server: false
 })
   .then(function() {
     console.log("build success...");
@@ -84,7 +88,11 @@ libpack({
 ## Example
 
 ```bash
-libpack -e ./index.js -o ./build
+libpack ./index.js ./build
+libpack ./index.jsx ./build
+libpack ./index.ts ./build
+libpack ./index.tsx ./build
+libpack ./index.vue ./build
 ```
 
 ## Contributing
@@ -92,8 +100,8 @@ libpack -e ./index.js -o ./build
 ```bash
 git clone https://github.com/axetroy/libpack.git
 cd ./libpack
-yarn
-yarn test
+npm i
+npm test
 ```
 
 You can flow [Contribute Guide](https://github.com/axetroy/libpack/blob/master/contributing.md)
