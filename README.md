@@ -89,10 +89,6 @@ libpack({
 libpack -e ./index.js -o ./build
 ```
 
-or here is a boilerplate repo
-
-[libpack-boilerplate](https://github.com/axetroy/libpack-boilerplate)
-
 ## Contributing
 
 ```bash
