@@ -5,8 +5,8 @@
   "main": "./build/index",
   "scripts": {
     "server": "libpack ./app.jsx ./build --server",
-    "start": "libpack ./index.jsx ./build --watch --externals react,react-dom",
-    "build": "NODE_ENV=production libpack ./index.jsx ./build --externals react,react-dom"
+    "start": "libpack ./index.jsx ./build --watch --externals preact",
+    "build": "NODE_ENV=production libpack ./index.jsx ./build --externals preact"
   },
   "author": "",
   "license": "ISC",
