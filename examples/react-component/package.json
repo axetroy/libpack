@@ -2,6 +2,7 @@
   "name": "react-component",
   "version": "1.0.0",
   "description": "",
+  "main": "./build/index",
   "scripts": {
     "server": "libpack --entry app.jsx --output ./build --server",
     "start": "libpack --externals react,react-dom --entry index.jsx --output ./build --watch",
