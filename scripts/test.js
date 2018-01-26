@@ -6,7 +6,7 @@ const fs = require("fs-extra");
 const spawn = require("cross-spawn");
 
 (async function() {
-  const testDir = path.join(__dirname, "testcase");
+  const testDir = path.join(process.cwd(), "tests");
   const files = await fs.readdir(testDir);
   while (files.length) {
     const subDir = files.shift();
@@ -24,7 +24,7 @@ const spawn = require("cross-spawn");
           spawn(
             "./bin/libpack",
             [
-              "./testcase/" + subDir + "/" + file,
+              "./tests/" + subDir + "/" + file,
               "./build/" + subDir,
               "--library",
               subDir

@@ -4,7 +4,7 @@
   "description": "Build your library without tears.",
   "bin": "./bin/libpack",
   "scripts": {
-    "test": "node ./test"
+    "test": "node ./scripts/test"
   },
   "repository": {
     "type": "git",

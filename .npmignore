@@ -71,6 +71,6 @@ package-lock.json
 .all-contributorsrc
 .travis.yml
 contributing.md
-test.js
-testcase
+scripts/test.js
+tests
 examples
