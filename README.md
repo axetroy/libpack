@@ -68,7 +68,8 @@ libpack({
   output: "./build",
   prepack: false,
   library: "my-library-name",
-  libraryTarget: "umd"
+  libraryTarget: "umd",
+  externals: []
 })
   .then(function() {
     console.log("build success...");

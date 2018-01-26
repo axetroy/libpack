@@ -103,6 +103,8 @@ module.exports = {
   plugins: [new ShakePlugin()].concat(
     process.env.NODE_ENV === "production" ? [UglifyJSPlugin] : []
   ),
+  externals: {
+  },
   watch: false,
   watchOptions: {
     ignored: /node_modules/

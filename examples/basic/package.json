@@ -1,0 +1,10 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "libpack --entry index.js --output ./build"
+  },
+  "author": "",
+  "license": "ISC"
+}

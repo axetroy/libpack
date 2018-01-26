@@ -9,6 +9,7 @@ program
   .description(pkg.description)
   .option("--cwd <cwd>", "Current work dir", program.STRING)
   .option("-w, --watch", "Watch the file change", program.BOOLEAN)
+  .option("--externals　<externals>", "Externals library", program.LIST)
   .option(
     "-e, --entry <entry>",
     "Entry file path",
