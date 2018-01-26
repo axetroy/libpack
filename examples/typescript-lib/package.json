@@ -1,0 +1,13 @@
+{
+  "name": "typescript-lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/index.js",
+  "scripts": {
+    "server": "libpack --entry src/index.ts --output ./build --server",
+    "start": "libpack --entry src/index.ts --output ./build --watch",
+    "build": "NODE_ENV=production libpack --entry src/index.ts --output ./build"
+  },
+  "author": "",
+  "license": "ISC"
+}
