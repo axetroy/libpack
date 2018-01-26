@@ -49,7 +49,7 @@ $ libpack --help
      --prepack                            Prepack the Javascript with facebook/prepack                                                  optional      default: false
      --library <library>                  Output library name, default your package.json name field                                     optional
      --libraryTarget <libraryTarget>      Output library target, https://webpack.js.org/configuration/output/#output-librarytarget      optional      default: "umd"
-     --externals <externals>              Externals library, eg. "--externals react react-dom"                                          optional      default: []
+     --externals <externals>              Externals library, eg. "--externals react,react-dom"                                          optional      default: []
 
    GLOBAL OPTIONS
 

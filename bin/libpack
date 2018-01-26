@@ -37,7 +37,7 @@ program
   )
   .option(
     "--externals <externals>",
-    'Externals library, eg. "--externals react react-dom"',
+    'Externals library, eg. "--externals react,react-dom"',
     program.LIST,
     []
   )
