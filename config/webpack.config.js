@@ -42,7 +42,7 @@ module.exports = {
   },
   resolve: {
     modules: ["node_modules"],
-    extensions: [".coffee", ".js", ".jsx", ".ts", ".tsx"]
+    extensions: [".js", ".jsx", ".ts", ".tsx", ".vue"]
   },
   module: {
     loaders: [
