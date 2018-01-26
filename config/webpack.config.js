@@ -102,8 +102,32 @@ module.exports = {
     extensions: [".js", ".json"],
     mainFields: ["loader", "main"]
   },
-  plugins: [new webpack.ProgressPlugin(), new ShakePlugin()].concat(
-    process.env.NODE_ENV === "production" ? [UglifyJSPlugin] : []
+  plugins: [
+    new webpack.DefinePlugin(
+      (() => {
+        let result = {};
+        for (let key in process.env) {
+          result["process.env." + key] = `"${process.env[key]}"`;
+        }
+        return result;
+      })()
+    ),
+    new webpack.ProgressPlugin(),
+    new ShakePlugin()
+  ].concat(
+    process.env.NODE_ENV === "production"
+      ? [
+          new UglifyJSPlugin({
+            uglifyOptions: {
+              ecma: 5,
+              compress: {
+                drop_console: true,
+                drop_debugger: true
+              }
+            }
+          })
+        ]
+      : []
   ),
   stats: "verbose",
   profile: true,

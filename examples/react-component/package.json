@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "libpack --entry index.jsx --output ./build --watch",
-    "build": "libpack --entry index.jsx --output ./build"
+    "build": "NODE_ENV=production libpack --entry index.jsx --output ./build"
   },
   "author": "",
   "license": "ISC"
