@@ -39,8 +39,8 @@ $ libpack --help
 
      --cwd <cwd>                          Current work dir                                                                              optional                           
      -w, --watch                          Watch the file change                                                                         optional                           
-     --externals　<externals>             Externals library                                                                             optional                           
-     --target　<target>                   Build target, https://webpack.js.org/concepts/targets/                                        optional      default: "web"       
+     --externals  <externals>             Externals library                                                                             optional                           
+     --target  <target>                   Build target, https://webpack.js.org/concepts/targets/                                        optional      default: "web"       
      -e, --entry <entry>                  Entry file path                                                                               required      default: "./index.js"
      -o --output <output>                 Output dir path                                                                               required      default: "./build/"  
      --prepack                            prepack the Javascript with facebook/prepack                                                  optional                           

@@ -9,9 +9,9 @@ program
   .description(pkg.description)
   .option("--cwd <cwd>", "Current work dir", program.STRING)
   .option("-w, --watch", "Watch the file change", program.BOOLEAN)
-  .option("--externals　<externals>", "Externals library", program.LIST)
+  .option("--externals <externals>", "Externals library", program.LIST)
   .option(
-    "--target　<target>",
+    "--target <target>",
     "Build target, https://webpack.js.org/concepts/targets/",
     program.STRING,
     "web"
