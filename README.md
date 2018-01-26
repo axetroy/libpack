@@ -18,8 +18,6 @@ Support:
 * [x] React
 * [x] Vue
 
-> I hate endless config
-
 ## Installation
 
 ```bash
