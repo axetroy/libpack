@@ -1,0 +1,17 @@
+{
+  "name": "preact-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/index",
+  "scripts": {
+    "server": "libpack ./app.jsx ./build --server",
+    "start": "libpack ./index.jsx ./build --watch --externals react,react-dom",
+    "build": "NODE_ENV=production libpack ./index.jsx ./build --externals react,react-dom"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "preact": "^8.2.7"
+  }
+}
