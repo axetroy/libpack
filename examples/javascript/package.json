@@ -4,7 +4,7 @@
   "scripts": {
     "server": "libpack ./index.js ./build --server",
     "start": "libpack ./index.js ./build --watch",
-    "build": "NODE_ENV=production libpack ./index.js ./build"
+    "build": "libpack ./index.js ./build"
   },
   "author": "",
   "license": "ISC",
