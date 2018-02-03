@@ -72,7 +72,7 @@ module.exports = {
   target: "web",
   resolve: {
     modules: ["node_modules"],
-    extensions: [".js", ".jsx", ".ts", ".tsx", ".vue"]
+    extensions: [".js", ".jsx", ".ts", ".tsx", ".vue", ".css"]
   },
   module: {
     loaders: [
@@ -102,22 +102,8 @@ module.exports = {
         use: ["style-loader", "css-loader"]
       },
       {
-        test: /\.(gif|png|jpe?g|svg)$/i,
-        loaders: [
-          "file-loader",
-          {
-            loader: "image-webpack-loader",
-            query: {
-              progressive: true,
-              optimizationLevel: 7,
-              interlaced: false,
-              pngquant: {
-                quality: "65-90",
-                speed: 4
-              }
-            }
-          }
-        ]
+        test: /\.(jpe?g|png|ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+        use: 'base64-inline-loader?limit=1000&name=[name].[ext]'
       },
       {
         test: /\.(txt)|(md)$/,

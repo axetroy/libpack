@@ -1,0 +1,13 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "scripts": {
+    "server": "libpack ./index.js ./build --server",
+    "start": "libpack ./index.js ./build --watch",
+    "build": "libpack ./index.js ./build"
+  },
+  "author": "",
+  "license": "ISC",
+  "main": "./build/index.js",
+  "description": ""
+}
