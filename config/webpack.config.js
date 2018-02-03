@@ -75,7 +75,6 @@ module.exports = {
     modules: ["node_modules"],
     extensions: [".js", ".jsx", ".ts", ".tsx", ".vue", ".css"]
   },
-  resolveLoader: paths.node_modules,
   module: {
     loaders: [
       {
@@ -115,7 +114,11 @@ module.exports = {
     ]
   },
   resolveLoader: {
-    modules: [path.join(__dirname, "../", "node_modules")],
+    modules: [
+      paths.node_modules,
+      "node_modules",
+      path.join(process.cwd(), "node_modules")
+    ],
     extensions: [".js", ".json"],
     mainFields: ["loader", "main"]
   },
