@@ -5,6 +5,7 @@ const path = require("path");
 const webpack = require("webpack");
 const ShakePlugin = require("webpack-common-shake").Plugin;
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+const paths = require("./paths");
 
 const babelOptions = {
   presets: [
@@ -74,6 +75,7 @@ module.exports = {
     modules: ["node_modules"],
     extensions: [".js", ".jsx", ".ts", ".tsx", ".vue", ".css"]
   },
+  resolveLoader: paths.node_modules,
   module: {
     loaders: [
       {
@@ -103,7 +105,7 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-        use: 'base64-inline-loader?limit=1000&name=[name].[ext]'
+        use: "base64-inline-loader?limit=1000&name=[name].[ext]"
       },
       {
         test: /\.(txt)|(md)$/,
