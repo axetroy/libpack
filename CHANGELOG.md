@@ -1,3 +1,50 @@
+<a name="0.6.4"></a>
+## [0.6.4](https://github.com/axetroy/libpack/compare/v0.6.3...v0.6.4) (2018-02-03)
+
+
+### Bug Fixes
+
+* fix resolve loader path ([244ef77](https://github.com/axetroy/libpack/commit/244ef77))
+
+
+
+<a name="0.6.3"></a>
+## [0.6.3](https://github.com/axetroy/libpack/compare/v0.6.2...v0.6.3) (2018-02-03)
+
+
+### Bug Fixes
+
+* fix resolve loader path ([537dd85](https://github.com/axetroy/libpack/commit/537dd85))
+
+
+
+<a name="0.6.2"></a>
+## [0.6.2](https://github.com/axetroy/libpack/compare/v0.6.1...v0.6.2) (2018-02-03)
+
+
+### Bug Fixes
+
+* **package:** update style-loader to version 0.20.0 ([aa13531](https://github.com/axetroy/libpack/commit/aa13531))
+* **package:** update vue-loader to version 14.0.0 ([5d78a25](https://github.com/axetroy/libpack/commit/5d78a25))
+
+
+### Features
+
+* 打印构建信息 ([2fc6b09](https://github.com/axetroy/libpack/commit/2fc6b09))
+* 支持打包图片成base64，并添加更多例子 ([1d1b5d3](https://github.com/axetroy/libpack/commit/1d1b5d3))
+
+
+
+<a name="0.6.1"></a>
+## [0.6.1](https://github.com/axetroy/libpack/compare/v0.6.0...v0.6.1) (2018-01-26)
+
+
+### Features
+
+* camelcaseify the library name ([3ed9482](https://github.com/axetroy/libpack/commit/3ed9482))
+
+
+
 <a name="0.6.0"></a>
 # [0.6.0](https://github.com/axetroy/libpack/compare/v0.5.2...v0.6.0) (2018-01-26)
 
