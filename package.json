@@ -54,7 +54,7 @@
     "vue-template-compiler": "^2.5.13",
     "webpack": "^3.0.0",
     "webpack-common-shake": "^1.2.0",
-    "webpack-dev-server": "^2.11.1",
+    "webpack-dev-server": "^3.0.0",
     "xml-loader": "^1.2.1"
   },
   "devDependencies": {
