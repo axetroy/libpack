@@ -1,8 +1,8 @@
 // @flow
-class Person {
+class PersonFlow {
   say(word: string) {
     console.log("hello " + word);
   }
 }
 
-new Person().say("world");
+new PersonFlow().say("world");

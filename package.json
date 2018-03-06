@@ -4,7 +4,7 @@
   "description": "Build your library without tears.",
   "bin": "./bin/libpack",
   "scripts": {
-    "test": "node ./scripts/test",
+    "test": "rm -rf ./build && node ./scripts/test",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "repository": {

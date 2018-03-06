@@ -13,6 +13,9 @@ const spawn = require("cross-spawn");
     const subFiles = await fs.readdir(path.join(testDir, subDir));
     while (subFiles.length) {
       const file = subFiles.shift();
+      if (path.basename(file).indexOf("index") < 0) {
+        continue;
+      }
       const ext = path.extname(file);
       switch (ext) {
         case ".js":
