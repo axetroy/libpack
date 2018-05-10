@@ -19,12 +19,6 @@ program
     "web"
   )
   .option(
-    "--prepack",
-    "Prepack the Javascript with facebook/prepack",
-    program.BOOLEAN,
-    false
-  )
-  .option(
     "--library <library>",
     "Output library name, default your package.json name field",
     program.STRING
