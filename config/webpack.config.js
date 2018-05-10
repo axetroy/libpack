@@ -3,7 +3,6 @@
  */
 const path = require("path");
 const webpack = require("webpack");
-const ShakePlugin = require("webpack-common-shake").Plugin;
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 const paths = require("./paths");
 
@@ -50,7 +49,6 @@ module.exports = function(config) {
       })()
     ),
     new webpack.ProgressPlugin(),
-    new ShakePlugin(),
     new webpack.SourceMapDevToolPlugin({
       filename: path.basename(file) + ".map"
     })
@@ -71,6 +69,11 @@ module.exports = function(config) {
     })
   ];
 
+  const postcssOptions = {
+    ident: "postcss",
+    plugins: [require("postcss-import")(), require("autoprefixer")]
+  };
+
   return {
     entry: {},
     output: {
@@ -82,7 +85,7 @@ module.exports = function(config) {
       extensions: [".js", ".jsx", ".ts", ".tsx", ".vue", ".css"]
     },
     module: {
-      loaders: [
+      rules: [
         {
           test: /\.jsx?$/,
           exclude: /(node_modules|bower_components)/,
@@ -106,7 +109,38 @@ module.exports = function(config) {
         },
         {
           test: /\.css$/,
-          use: ["style-loader", "css-loader"]
+          use: [
+            "style-loader",
+            "css-loader",
+            {
+              loader: "postcss-loader",
+              options: postcssOptions
+            }
+          ]
+        },
+        {
+          test: /\.less$/,
+          use: [
+            "style-loader",
+            "css-loader",
+            {
+              loader: "postcss-loader",
+              options: postcssOptions
+            },
+            "less-loader"
+          ]
+        },
+        {
+          test: /\.s(a|c)ss$/,
+          use: [
+            "style-loader",
+            "css-loader",
+            {
+              loader: "postcss-loader",
+              options: postcssOptions
+            },
+            "sass-loader"
+          ]
         },
         {
           test: /\.(jpe?g|png|ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
@@ -116,7 +150,7 @@ module.exports = function(config) {
           test: /\.(txt)|(md)$/,
           use: "raw-loader"
         },
-        {test: /\.xml$/, loader: "xml-loader"} // will load all .xml files with xml-loader by default
+        { test: /\.xml$/, loader: "xml-loader" } // will load all .xml files with xml-loader by default
       ]
     },
     resolveLoader: {
@@ -128,6 +162,7 @@ module.exports = function(config) {
       extensions: [".js", ".json"],
       mainFields: ["loader", "main"]
     },
+    mode: process.env.NODE_ENV === "production" ? "production" : "none",
     node: {
       global: false,
       process: false,
