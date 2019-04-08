@@ -1,0 +1,18 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "examples/basic-javascript-with-css/package.json",
+        "examples/basic-javascript-with-image/package.json",
+        "examples/basic-javascript/package.json",
+        "examples/flow/package.json",
+        "examples/javascript/package.json",
+        "examples/preact-component/package.json",
+        "examples/react-component/package.json",
+        "examples/typescript/package.json",
+        "examples/vue-component/package.json",
+        "package.json"
+      ]
+    }
+  }
+}
